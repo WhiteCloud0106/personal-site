@@ -1,7 +1,62 @@
 {
-  "settings":{"site_title":"創作基地","owner":"WhiteCloud0106","intro":"這裡收藏我的小說、遊戲模組開發紀錄，以及一些在瀏覽器裡誕生的小遊戲與工具。"},
-  "novels":[{"id":"fog-harbor","title":"霧港夜航","status":"連載中","summary":"一座只在濃霧裡出現的港口，與一封不該寄達的信。","description":"這裡可以放小說簡介、世界觀或閱讀提示。","chapters":[{"title":"第一章：來信","date":"2026-09-18","body":"這裡是第一章的示例內容。你可以從管理後台新增、刪除或重新排序章節。"}]}],
-  "projects":[{"id":"frontier-survival","title":"邊境生存擴充","type":"mod","status":"開發中","summary":"新的資源循環、生態事件與建造系統。","details":"在這裡記錄專案介紹、版本資訊、下載方式與待辦事項。","url":""},{"id":"rhythm-score","title":"音遊查分器","type":"tool","status":"Beta","summary":"快速整理成績、計算 Rating 並追蹤進步曲線。","details":"在這裡介紹工具的支援範圍與使用方法。","url":""}],
-  "webapps":[{"id":"tiny-adventure","title":"微光探險隊","status":"可遊玩","summary":"五分鐘一局的瀏覽器迷你探險。","html":"<!doctype html><html lang=\"zh-Hant\"><head><meta charset=\"utf-8\"><meta name=\"viewport\" content=\"width=device-width\"><style>body{margin:0;display:grid;place-items:center;min-height:100vh;background:#101827;color:#d9ff63;font-family:sans-serif;text-align:center}button{padding:12px 20px;background:#d9ff63;border:0;font-weight:bold}</style></head><body><main><h1>微光探險隊</h1><p>這裡可以放完整的 HTML／CSS／JavaScript 小遊戲。</p><button onclick=\"this.textContent='探險開始！'\">開始</button></main></body></html>"}],
-  "devlogs":[{"id":"survival-loop","date":"2026-09-21","category":"遊戲模組 · 系統設計","title":"讓「生存」不只是填滿兩條數值","summary":"從環境回饋到資源選擇，重新整理生存循環的設計筆記。","body":"這裡可以撰寫完整的開發日誌，支援標題、清單、連結與圖片。"}]
+  "settings": {
+    "site_title": "白雲之家",
+    "owner": "WhiteCloud",
+    "intro": "這裡收藏我的小說、遊戲模組開發紀錄，以及一些在瀏覽器裡誕生的小遊戲與工具。\n//網站生成by Codex"
+  },
+  "novels": [
+    {
+      "id": "test",
+      "title": "test",
+      "status": "連載中",
+      "summary": "test",
+      "description": "test",
+      "chapters": [
+        {
+          "title": "test",
+          "date": "2026-09-25",
+          "body": "test"
+        }
+      ]
+    }
+  ],
+  "projects": [
+    {
+      "id": "rhythm-score",
+      "title": "Arcaea填分型查分器",
+      "type": "tool",
+      "status": "Beta",
+      "summary": "快速整理成績、計算 Rating 並追蹤進步曲線。",
+      "details": "選取譜面後填入成績，並自動計算和輸出B50結果。\n(測試中，很快上架)",
+      "url": ""
+    },
+    {
+      "id": "hoi4-taiwan",
+      "title": "鋼鐵雄心4 台灣模組",
+      "type": "mod",
+      "status": "策畫中",
+      "summary": "提供可遊玩的1936台灣總督府內容",
+      "details": "開發中，敬請期待",
+      "url": ""
+    }
+  ],
+  "devlogs": [
+    {
+      "id": "hoi4-taiwan-dc",
+      "date": "2026-09-25",
+      "category": "遊戲模組",
+      "title": "Development Corner #1 | 簡介和目標",
+      "summary": "《Heart of Iron IV》在2025年11月更新的《No Compromise, No Surrender》DLC之中，在臺灣這個區域新增了「臺灣民主國」這個可成立國家，不過卻沒有製作「臺灣總督府」這類的國家。或許是因為體量不足，又或者是P社不想做，總之作為臺灣玩家的我，在這個機會之下也想嘗試做一個關於臺灣的模組。",
+      "body": "# 前言\n\n《Heart of Iron IV》在2025年11月更新的《No Compromise, No Surrender》DLC之中，在臺灣這個區域新增了「臺灣民主國」這個可成立國家，不過卻沒有製作「臺灣總督府」這類的國家。或許是因為體量不足，又或者是P社不想做，總之作為臺灣玩家的我，在這個機會之下也想嘗試做一個關於臺灣的模組。（同時練習一下自己的程式能力）\n\n 當然，我也深知一個優秀的模組絕不是我一個普通大學生就能完成的，在過程中確實從查證到美工都依靠了AI來進行部分協助，當然在設計的最終決策以及確認仍會由我來進行最終的檢查。不過關於AI的部分還是得說在前頭，希望大家能明確了解，以防未來可能的紛爭。\n\n# 簡介\n\n1936年的臺灣，仍未進入戰爭準備狀態……至少前半年仍是如此。時任總督中川健藏為台灣最後一任文官總督，直到九月才迎來小林躋造上任，開始了後半的武官總督時代。我們透過人物關係推演，配合DLC之中日本四條路線的走向來設計臺灣的國策樹及遊戲內容，包含史實及獨立線，以及在日本可能的內戰過程中臺灣可能採取的行動。\n\n# 目標\n\n我們自然不認為在正常情況下臺灣能成為比肩中國日本、甚至英美強度的國家。但歷史和遊戲機制並不總是完全一致，我們依舊希望讓玩家在遊玩時有好的體驗。玩家可以透過軍事線及工業線取得優秀的三軍及不俗的工業能力，透過政治線國策嘗試在共榮圈中獲得重要地位、或是脫離日本以尋求民主自治、共產革命、中華血脈甚至南島語族大一統的未來。\n\n# Development Corner\n\n遊戲並不是只有遊戲，我們也同樣希望在研究歷史的過程中不論這些資料究竟是成功引用到遊戲裡還是只能作為紀錄，都能整理並讓更多人知道我們的資料來源、模組內容的設計方向。當然我們也可能有錯，甚至可能因為資料搜尋的不完整而有很大的錯誤，也歡迎指正，我們都會接納並修正。\n\n# 接下來\n\n實際上統整成這樣的內容又是一段時間，我無法保證這能成為定期更新的項目。我只能盡量在設計及製作進行時多餘的空閒時間將已經差不多完成統整的知識內容進行整理和發佈。"
+    }
+  ],
+  "webapps": [
+    {
+      "id": "test",
+      "title": "test",
+      "status": "可遊玩",
+      "summary": "test",
+      "html": "test"
+    }
+  ]
 }
