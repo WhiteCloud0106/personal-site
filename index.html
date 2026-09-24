@@ -1,0 +1,152 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="小說、遊戲模組開發日誌、網頁遊戲與實用工具。">
+  <meta name="theme-color" content="#111827">
+  <title>創作基地｜小說、模組與網頁作品</title>
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">跳至主要內容</a>
+  <header class="site-header">
+    <a class="brand" href="#top" aria-label="回到首頁">
+      <span class="brand-mark">∴</span>
+      <span>創作基地</span>
+    </a>
+    <nav aria-label="主要導覽">
+      <a href="#works">作品</a>
+      <a href="#log">開發日誌</a>
+      <a href="#about">關於</a>
+    </nav>
+  </header>
+
+  <main id="main">
+    <section class="hero" id="top">
+      <div class="hero-copy reveal">
+        <p class="eyebrow">STORIES · MODS · WEB EXPERIMENTS</p>
+        <h1>把腦中的世界，<br><em>做成可以抵達的地方。</em></h1>
+        <p class="hero-intro">這裡收藏我的小說、遊戲模組開發紀錄，以及一些在瀏覽器裡誕生的小遊戲與工具。</p>
+        <div class="hero-actions">
+          <a class="button primary" href="#works">開始探索</a>
+          <a class="button ghost" href="#log">最近在做什麼</a>
+        </div>
+      </div>
+      <div class="hero-orbit" aria-hidden="true">
+        <div class="planet"><span>BUILD<br>PLAY<br>WRITE</span></div>
+        <i class="orbit orbit-one"></i>
+        <i class="orbit orbit-two"></i>
+        <b class="star s1"></b><b class="star s2"></b><b class="star s3"></b>
+      </div>
+    </section>
+
+    <section class="marquee" aria-label="內容分類">
+      <div>小說 ✦ 遊戲模組 ✦ 開發日誌 ✦ 網頁遊戲 ✦ 音遊工具 ✦ 小型實驗 ✦&nbsp;</div>
+      <div aria-hidden="true">小說 ✦ 遊戲模組 ✦ 開發日誌 ✦ 網頁遊戲 ✦ 音遊工具 ✦ 小型實驗 ✦&nbsp;</div>
+    </section>
+
+    <section class="section works" id="works">
+      <div class="section-heading reveal">
+        <div>
+          <p class="eyebrow">SELECTED WORKS</p>
+          <h2>作品與實驗</h2>
+        </div>
+        <p>有些是完整作品，有些仍在長大。<br>點進去看看它們現在的模樣。</p>
+      </div>
+
+      <div class="filter-bar reveal" role="group" aria-label="篩選作品">
+        <button class="filter active" data-filter="all">全部</button>
+        <button class="filter" data-filter="novel">小說</button>
+        <button class="filter" data-filter="mod">遊戲模組</button>
+        <button class="filter" data-filter="web">網頁作品</button>
+        <label class="search"><span>搜尋</span><input id="search" type="search" placeholder="輸入關鍵字…"></label>
+      </div>
+
+      <div class="project-grid" id="project-grid">
+        <article class="project-card featured reveal" data-category="novel" data-search="小說 霧港 夜航 奇幻">
+          <div class="card-visual visual-novel"><span class="card-number">01</span><span class="moon"></span></div>
+          <div class="card-body">
+            <div class="card-meta"><span>連載小說</span><time datetime="2026-09-18">2026.09.18</time></div>
+            <h3>霧港夜航</h3>
+            <p>一座只在濃霧裡出現的港口，與一封不該寄達的信。</p>
+            <a href="pages/coming-soon.html">閱讀作品 <span>↗</span></a>
+          </div>
+        </article>
+
+        <article class="project-card reveal" data-category="mod" data-search="遊戲模組 模組 生存 建造 開發">
+          <div class="card-visual visual-mod"><span class="card-number">02</span><div class="cube">MOD</div></div>
+          <div class="card-body">
+            <div class="card-meta"><span>遊戲模組</span><span>開發中</span></div>
+            <h3>邊境生存擴充</h3>
+            <p>新的資源循環、生態事件與建造系統。</p>
+            <a href="pages/coming-soon.html">查看專案 <span>↗</span></a>
+          </div>
+        </article>
+
+        <article class="project-card reveal" data-category="web" data-search="網頁遊戲 瀏覽器 小遊戲 像素 探險">
+          <div class="card-visual visual-game"><span class="card-number">03</span><div class="pixel-character">▲</div></div>
+          <div class="card-body">
+            <div class="card-meta"><span>網頁遊戲</span><span>可遊玩</span></div>
+            <h3>微光探險隊</h3>
+            <p>五分鐘一局的瀏覽器迷你探險。</p>
+            <a href="pages/coming-soon.html">開始遊玩 <span>↗</span></a>
+          </div>
+        </article>
+
+        <article class="project-card reveal" data-category="web" data-search="音遊 查分器 成績 工具 rhythm score">
+          <div class="card-visual visual-tool"><span class="card-number">04</span><div class="bars"><i></i><i></i><i></i><i></i><i></i></div></div>
+          <div class="card-body">
+            <div class="card-meta"><span>網頁工具</span><span>Beta</span></div>
+            <h3>音遊查分器</h3>
+            <p>快速整理成績、計算 Rating 並追蹤進步曲線。</p>
+            <a href="pages/coming-soon.html">開啟工具 <span>↗</span></a>
+          </div>
+        </article>
+      </div>
+      <p class="empty-state" id="empty-state" hidden>找不到符合的作品，換個關鍵字試試看。</p>
+    </section>
+
+    <section class="section journal" id="log">
+      <div class="section-heading reveal">
+        <div><p class="eyebrow">DEV JOURNAL</p><h2>開發日誌</h2></div>
+        <p>記錄卡關、突破，以及<br>那些值得留下的小發現。</p>
+      </div>
+      <div class="journal-list">
+        <a class="journal-entry reveal" href="pages/coming-soon.html">
+          <time datetime="2026-09-21"><b>21</b> SEP 2026</time>
+          <div><span>遊戲模組 · 系統設計</span><h3>讓「生存」不只是填滿兩條數值</h3></div>
+          <p>從環境回饋到資源選擇，重新整理生存循環的設計筆記。</p><i>↗</i>
+        </a>
+        <a class="journal-entry reveal" href="pages/coming-soon.html">
+          <time datetime="2026-09-12"><b>12</b> SEP 2026</time>
+          <div><span>網頁工具 · UI</span><h3>查分器的第一版介面完成了</h3></div>
+          <p>如何讓大量數字不再像試算表，同時保留需要的資訊密度。</p><i>↗</i>
+        </a>
+        <a class="journal-entry reveal" href="pages/coming-soon.html">
+          <time datetime="2026-08-29"><b>29</b> AUG 2026</time>
+          <div><span>小說 · 寫作</span><h3>為不存在的城市畫一張地圖</h3></div>
+          <p>地理如何影響角色移動、資訊流通與故事節奏。</p><i>↗</i>
+        </a>
+      </div>
+    </section>
+
+    <section class="section about" id="about">
+      <div class="about-label reveal"><p class="eyebrow">ABOUT THIS PLACE</p><span class="asterisk">✳</span></div>
+      <div class="about-copy reveal">
+        <h2>歡迎來到我的<br><em>數位工作桌。</em></h2>
+        <p>我喜歡寫故事、拆解遊戲系統，也喜歡把一個突發奇想做成真的可以操作的網頁。這個網站是作品集，也是持續公開的創作過程。</p>
+        <p class="note">目前內容仍在整理中，之後會陸續補上作品、下載與原始碼。</p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div><span class="brand-mark">∴</span><strong>創作基地</strong></div>
+    <p>Made with curiosity and too many open tabs.</p>
+    <p>© <span id="year"></span> Your Name</p>
+  </footer>
+  <script src="script.js"></script>
+</body>
+</html>
