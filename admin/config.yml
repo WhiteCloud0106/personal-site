@@ -1,0 +1,77 @@
+backend:
+  name: github
+  repo: WhiteCloud0106/personal-site
+  branch: main
+  auth_methods: [token]
+locale: zh_Hant
+media_folder: uploads
+public_folder: /personal-site/uploads
+display_url: https://whitecloud0106.github.io/personal-site/
+logo_url: /personal-site/assets/favicon.svg
+collections:
+  - name: content
+    label: 網站內容
+    files:
+      - name: site
+        label: 全站內容
+        file: content/site.json
+        format: json
+        fields:
+          - label: 基本設定
+            name: settings
+            widget: object
+            fields:
+              - { label: 網站名稱, name: site_title, widget: string }
+              - { label: 站主名稱, name: owner, widget: string }
+              - { label: 首頁介紹, name: intro, widget: text }
+          - label: 小說
+            name: novels
+            widget: list
+            summary: '{{fields.title}}'
+            fields:
+              - { label: 識別碼, name: id, widget: string, hint: '英文、數字與連字號；建立後不要更改' }
+              - { label: 書名, name: title, widget: string }
+              - { label: 狀態, name: status, widget: string, default: 連載中 }
+              - { label: 卡片簡介, name: summary, widget: text }
+              - { label: 完整介紹, name: description, widget: markdown }
+              - label: 章節
+                name: chapters
+                widget: list
+                summary: '{{fields.title}}'
+                fields:
+                  - { label: 章名, name: title, widget: string }
+                  - { label: 發布日期, name: date, widget: datetime, date_format: YYYY-MM-DD, time_format: false, format: YYYY-MM-DD }
+                  - { label: 內文, name: body, widget: markdown }
+          - label: 模組與工具專案
+            name: projects
+            widget: list
+            summary: '{{fields.title}}'
+            fields:
+              - { label: 識別碼, name: id, widget: string, hint: '英文、數字與連字號；建立後不要更改' }
+              - { label: 名稱, name: title, widget: string }
+              - { label: 類型, name: type, widget: select, options: [{ label: 遊戲模組, value: mod }, { label: 網頁工具, value: tool }] }
+              - { label: 狀態, name: status, widget: string }
+              - { label: 卡片簡介, name: summary, widget: text }
+              - { label: 完整內容, name: details, widget: markdown }
+              - { label: 外部網址, name: url, widget: string, required: false }
+          - label: 開發日誌
+            name: devlogs
+            widget: list
+            summary: '{{fields.date}} · {{fields.title}}'
+            fields:
+              - { label: 識別碼, name: id, widget: string, hint: '英文、數字與連字號；建立後不要更改' }
+              - { label: 日期, name: date, widget: datetime, date_format: YYYY-MM-DD, time_format: false, format: YYYY-MM-DD }
+              - { label: 分類, name: category, widget: string }
+              - { label: 標題, name: title, widget: string }
+              - { label: 摘要, name: summary, widget: text }
+              - { label: 內文, name: body, widget: markdown }
+          - label: 網頁遊戲與互動內容
+            name: webapps
+            widget: list
+            summary: '{{fields.title}}'
+            fields:
+              - { label: 識別碼, name: id, widget: string, hint: '英文、數字與連字號；建立後不要更改' }
+              - { label: 名稱, name: title, widget: string }
+              - { label: 狀態, name: status, widget: string, default: 可遊玩 }
+              - { label: 簡介, name: summary, widget: text }
+              - { label: 完整 HTML, name: html, widget: code, default_language: html, output_code_only: true, hint: '貼入可獨立執行的 HTML，包含需要的 CSS 與 JavaScript' }
