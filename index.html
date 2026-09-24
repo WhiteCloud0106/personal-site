@@ -65,7 +65,7 @@
         <label class="search"><span>搜尋</span><input id="search" type="search" placeholder="輸入關鍵字…"></label>
       </div>
 
-      <div class="project-grid" id="project-grid">
+      <div class="project-grid" id="project-grid" aria-live="polite">
         <article class="project-card featured reveal" data-category="novel" data-search="小說 霧港 夜航 奇幻">
           <div class="card-visual visual-novel"><span class="card-number">01</span><span class="moon"></span></div>
           <div class="card-body">
@@ -114,7 +114,7 @@
         <div><p class="eyebrow">DEV JOURNAL</p><h2>開發日誌</h2></div>
         <p>記錄卡關、突破，以及<br>那些值得留下的小發現。</p>
       </div>
-      <div class="journal-list">
+      <div class="journal-list" id="journal-list">
         <a class="journal-entry reveal" href="pages/coming-soon.html">
           <time datetime="2026-09-21"><b>21</b> SEP 2026</time>
           <div><span>遊戲模組 · 系統設計</span><h3>讓「生存」不只是填滿兩條數值</h3></div>
@@ -146,7 +146,7 @@
   <footer>
     <div><span class="brand-mark">∴</span><strong>創作基地</strong></div>
     <p>Made with curiosity and too many open tabs.</p>
-    <p>© <span id="year"></span> Your Name</p>
+    <p>© <span id="year"></span> <span id="owner-name">Your Name</span> · <a class="admin-link" href="admin/">站主登入</a></p>
   </footer>
   <script src="script.js"></script>
 </body>
